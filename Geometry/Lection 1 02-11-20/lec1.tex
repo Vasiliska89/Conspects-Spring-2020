@@ -1,0 +1,151 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{mathtools}
+\usepackage[margin=2cm]{geometry}
+\usepackage[russian]{babel}
+\title{Лекция 1.}
+\author{Косовский Н.Н.}
+\date{11 февраля 2020 г.}
+
+\begin{document}
+
+\maketitle
+\section{Метрическое пространство. Метрика.}
+\underline{\textit{$\circ$ Определение:}}\\
+
+  $d: X \times X\rightarrow \mathbb{R}$ --- \emph{\textit{метрика}}, если:
+ \begin{enumerate}
+\item $~d\left( x, y\right)\geq 0;~~ d\left( x, y\right) = 0\Longleftrightarrow x=y ,$
+\item $~d\left( x, y\right)=d\left( y, x\right) ,$
+\item $~d\left( x, y\right)+d\left( y, z\right)\geq d(x, z) .$
+
+\end{enumerate}
+ (X, d) --- \textit{метрическое пространство.}
+ \\
+ \subsection{Примеры метрик.}
+ \begin{spacing}{1.5}
+ \begin{enumerate}
+\item V - векторное пространство, $<\cdot , \cdot >$ - скалярное произведение.
+ \\$ ~~~~~~\sphericalangle ~~d(\vec{v_{1}}, \vec{v_{2}}) = \sqrt{<\vec{v_{1}} - \vec{v_{2}},\vec{v_{1}} - \vec{v_{2}}> } = |\vec{v_{1}} - \vec{v_{2}}|$
+ \item (E, V) -- аффинное пространство, скалярное произведение на V.
+ \item \emph{$\circ$ Определение:}\\
+ \emph{Норма }$||\cdot||: V\rightarrow  \mathbb{R}$
+ \subitem $1. ~~||\vec{v}||\geq 0 ; ~~||\vec{v}|| = 0 \Longleftrightarrow \vec{v} = \vec{0} $
+ \subitem $ 2. ~~||\lambda\vec{v}|| = |\lambda|*||\vec{v}|| $
+ \subitem $ 3.~~||\vec{v_{1}} + \vec{v_{2}} ||\leq || \vec{v_{1}} || + ||\vec{v_{2}}||$
+ \\Тогда $d(\vec{v_{1}}, \vec{v_{2}}) = ||\vec{v_{1}} - \vec{v_{2}}||$ - метрика.
+ \\ \\3.1 $V = \mathbb{R}^{n} ,~~~ ||x||_{p} = (\sum |x_{i}|^{p})^{1/p},~~~ p\geq 1$
+ \subsubitem $~~~~~~~~~~||x||_{\inf}=\underset{1\leq i\leq n}{max}(|x_{i}|)$
+ \item $S^{2}$ --- сфера, 2 метрики:
+ \subsubitem $1. \mathbb{R}^{3}\rightarrow \mathbb{R},$ 
+ \subsubitem 2. Угловая метрика.
+\end{enumerate}
+\end{spacing}
+\section{Открытые множества. Топологические пространства.}
+\subsection{Открытые множества. Свойства.}
+\underline{\textit{$\circ$ Определения:}}\\
+\begin{enumerate}
+\item $R>0,~B(x_{0}, R)\overset{def}{=}\lbrace x\in X|~~d(x_{0},x)<R\rbrace$ ---\emph{открытый шар радиуса R с центром $x_{0}$}.
+\item $S(x_{0}, R)\overset{def}{=}\lbrace x\in X|~~d(x_{0}, x)=R\rbrace$ ---\emph{сфера}.
+\item $(X, d)$ --метрическое пространство, $U\subseteq X$
+\\$U$ -- \emph{открыто}, если:
+\subitem $\forall x\in U \exists \varepsilon >0 :~~B(x, \varepsilon)\subseteq U.$
+\end{enumerate}
+
+\subsubsection{Теорема об открытости шара.}
+Открытый шар открыт.
+\begin{spacing}{1.5}
+ \textbf{Доказательство:}\\
+$\sphericalangle x\in B(x_{0}, R).  \\
+  \varepsilon :=R-d(x_{0}, x)>0 $
+ (т.к. $x\in B(x_{0}, R)\Rightarrow d(x_{0}, x)<R)$
+ \\Пусть $y\in B(x, \varepsilon)\Rightarrow d(x, y)<\varepsilon = R-d(x_{0}, x) $
+ \\$d(x_{0}, y)\leq d(x_{0}, x)+d(x, y)<R\Rightarrow y\in B(x_{0}, R)\Rightarrow B(x, \varepsilon)\subseteq B(x_{0}, R). $
+\begin{flushright}
+$QED.$
+\end{flushright}
+\subsubsection{Теорема о свойствах $\Omega$}
+$\Omega \overset{def}{=} \lbrace U\subseteq X | U$--открыто$\rbrace;~~X$--метрическое пространство.
+\\Тогда:
+\begin{enumerate}
+\item $\emptyset ,~X\in \Omega$
+\item $U,~V\in \Omega \Rightarrow U\cap V\in \Omega$
+\item $U_{\alpha}\in \Omega \Rightarrow \underset{\alpha\in I}{\cup}U_{\alpha}\in \Omega$
+\end{enumerate}
+ \textbf{Доказательство:}
+ \begin{enumerate}
+ 	\item 
+ 	$1)~\emptyset$---очевидно.
+ 	$2)~\sphericalangle \varepsilon=1$ (или любой другой, далее очевидно.)
+ 	\item $\sphericalangle y\in U\cap V$
+ 	\\$y\in U \Rightarrow \exists \varepsilon_{1}>0:\forall x\in X d(x, y)<\varepsilon_{1}\Rightarrow x\in U$
+ 	\\$y\in V \Rightarrow \exists \varepsilon_{2}>0:\forall x\in X d(x, y)<\varepsilon_{2}\Rightarrow x\in V$
+ 	\\$\sphericalangle \varepsilon:=min(\varepsilon_{1}, \varepsilon_{2}).$
+ 	\\Далее очевидно.
+ 	\item $x\in \underset{\alpha\in I}{\cup}U_{\alpha}\Rightarrow \exists\alpha\in I: x\in U_{i}\Rightarrow\exists\varepsilon : \forall y\in X d(x, y)<\varepsilon\Rightarrow y\in U_{\alpha}\Rightarrow y\in \underset{\alpha\in I}{\cup}U_{\alpha} $
+ 	\begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\subsection{Топологическое пространство. Топология.}
+ \underline{\textit{$\circ$ Определение:}}\\
+ $(X, \Omega)$--- \emph{топологическое пространство}, если:
+ \begin{enumerate}
+ \item $\emptyset,~X\in \Omega$
+ \item $U, V\in \Omega \Rightarrow U\cap V\in \Omega$
+ \item $U_{\alpha}\in \Omega \Rightarrow \underset{\alpha\in I}{\cup}U_{\alpha}\in \Omega$
+ 
+ \end{enumerate}
+  $\Omega$ -- \emph{топология}, элементы $\Omega$ -- \emph{открытые.}
+\subsubsection{Примеры топологических пространств.}
+\begin{enumerate}
+\item $\Omega=2^{X}$ -- \emph{дискретная топология.}\\
+\underline{\emph{$\bullet$ Упражнение: }} Доказать, что \emph{дискретной метрике} $d(x, y) = \begin{cases}
+  0,  &  x=y  \\
+  1, &  x\neq y 
+\end{cases}$ соответствует дискретная топология.
+\item $\Omega=\lbrace\emptyset,~X\rbrace$ - \emph{антидискретная топология}
+\item $X=\mathbb{R};~~ \Omega=\lbrace (a, +\inf)|~~a\in \mathbb{R} \rbrace\cup\lbrace\emptyset,~ \mathbb{R}\rbrace $ - \emph{стрелка}
+\end{enumerate}
+\subsection{Окрестности. Теорема о дополнении подмножества.}
+\underline{\textit{$\circ$ Определения:}}\\
+$x_{0}\in X.$
+\begin{enumerate}
+\item \emph{Окрестность точки $x_{0}$} --- произвольное открытое множество, содержащее $x_{0}.$
+\item \emph{$\varepsilon$--окрестность (.) $x_{0}$}--$B(x_{0},\varepsilon).$ Определено только для метрических пространств.
+\end{enumerate}
+\subsubsection{Теорема о дополнении подмножества}
+$F\subset X$;  $X$ --- метрическое пространство
+\begin{enumerate}
+\item $(\forall x \forall\varepsilon~~(B(x,\varepsilon)\backslash\lbrace x\rbrace\cap F\neq\emptyset)\Rightarrow x\in F)\Leftrightarrow X\backslash F$--открыто.
+\item $X$--- топологическое пространство.\\
+$((\forall U_{x}$---откр. $U_{x}\cap F\neq \emptyset) \Rightarrow x\in F)\Longleftrightarrow X\backslash F$ --- открыто.
+\end{enumerate}
+\textbf{Доказательство:}
+ \begin{enumerate}
+ \item Если $X$--- метрическое пространство, то $1.\Longleftrightarrow 2.~:$
+ \\ $ 1.\Leftarrow 2.:$ -- очевидно
+ ; $ 1.\Rightarrow 2.:$
+ \\$\sphericalangle U_{x}$ --откр. $\Rightarrow \exists\varepsilon: B(x, \varepsilon)\subseteq U_{x}\Rightarrow((B(x, \varepsilon)\backslash\lbrace x\rbrace ) \cap F\subset U_{x}\backslash\lbrace x\rbrace\cap F\Rightarrow U_{x}\backslash\lbrace x\rbrace\cap F\neq \emptyset.$
+ \begin{flushright}
+$QED.$
+\end{flushright}
+ \end{enumerate}
+Достаточно доказать (2.)
+ \begin{enumerate}
+ \item $\Rightarrow$, т.е. $x\notin F \Rightarrow \exists U_{x}: U_{x}\backslash \lbrace x\rbrace\cap F=\emptyset\Rightarrow U_{x}\cap F=\emptyset\Rightarrow U_{x}\subseteq X\backslash F\Rightarrow \underset{x\in X\backslash F}{\cup}U_{x}\subseteq X\backslash F  $
+ "$\supseteq$" - тоже(оч.), $\Rightarrow\underset{x\in X\backslash F}{\cup}U_{x}= X\backslash F$, но $\cup U$ - откр.
+ \begin{flushright}
+$QED.$
+\end{flushright}
+\item $\Leftarrow$ Произошел троллинг, все очевидно, доказывать от противного.
+  \end{enumerate}
+\end{spacing}
+
+\end{document}
