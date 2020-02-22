@@ -125,7 +125,7 @@ $F\subset X$;  $X$ --- метрическое пространство
 \begin{enumerate}
 \item $(\forall x \forall\varepsilon~~(B(x,\varepsilon)\backslash\lbrace x\rbrace\cap F\neq\emptyset)\Rightarrow x\in F)\Leftrightarrow X\backslash F$--открыто.
 \item $X$--- топологическое пространство.\\
-$((\forall U_{x}$---откр. $U_{x}\cap F\neq \emptyset) \Rightarrow x\in F)\Longleftrightarrow X\backslash F$ --- открыто.
+$((\forall U_{x}$---откр. $U_{x}\cap F\backslash\lbrace x\rbrace\neq \emptyset) \Rightarrow x\in F)\Longleftrightarrow X\backslash F$ --- открыто.
 \end{enumerate}
 \textbf{Доказательство:}
  \begin{enumerate}
@@ -144,8 +144,15 @@ $QED.$
  \begin{flushright}
 $QED.$
 \end{flushright}
-\item $\Leftarrow$ Произошел троллинг, все очевидно, доказывать от противного.
+\item $\Leftarrow :$
+\\ Пусть $X\backslash F$--откр. и $\forall U_{x}$--откр.   $(U_{x}\backslash\lbrace x\rbrace\cap F\neq\emptyset)$ 
+\\Допустим, что $x\notin F~\Rightarrow ~ x\in (X\backslash F)$
+\\Тогда $\emptyset \neq ((X\backslash F)\backslash\lbrace x\rbrace)\cap F = ((X\backslash F)\cap F)\backslash \lbrace x\rbrace = \emptyset.$ Противоречие.\footnote{Последняя часть доказательства является авторской. Лекционный вариант утерян бесследно.}
+ \begin{flushright}
+$QED.$
+\end{flushright}
   \end{enumerate}
+  
 \end{spacing}
 
 \end{document}
