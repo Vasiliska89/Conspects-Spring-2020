@@ -1,0 +1,4 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Замкнутые множества.}{3}%
+\contentsline {subsection}{\numberline {1.1}Теорема о множестве замкнутых множеств}{3}%
+\contentsline {subsection}{\numberline {1.2}Теорема о соответствующей топологии}{3}%
