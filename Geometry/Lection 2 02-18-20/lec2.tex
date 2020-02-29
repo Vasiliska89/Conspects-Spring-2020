@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{mathtools}
+\usepackage[margin=2cm]{geometry}
+\usepackage[russian]{babel}
+\title{Лекция 1.}
+\author{Косовский Н.Н.}
+\date{18 февраля 2020 г.}
+
+\begin{document}
+\begin{spacing}{1.5}
+\maketitle
+\newpage
+     
+    \tableofcontents
+    \newpage
+
+\section{Замкнутые множества.}
+\underline{\textit{$\circ$ Определение:}}\\
+$F$ --- \emph{Замкнуто} $\Longleftrightarrow X\backslash F$ --- открыто.
+\subsection{Теорема о множестве замкнутых множеств}
+$ \mathcal{F} $ --- множество замкнутых множеств.
+\\Тогда:
+\begin{enumerate}
+\item $\emptyset ,~X\in \mathcal{F}$
+\item $F,~G\in \mathcal{F} \Rightarrow F\cup G\in \mathcal{F}$
+\item $F_{\alpha}\in \mathcal{F} \Rightarrow \underset{\alpha\in I}{\cap}F_{\alpha}\in \mathcal{F}$
+\end{enumerate}
+ \textbf{Доказательство:}
+ \begin{enumerate}
+ 	\item очевидно: $(X\backslash X = \emptyset~~;~~X\backslash \emptyset = X)$
+ 	\item $F\cup G$ --- замкнуто $\Longleftrightarrow X\backslash (F\cup G)$ ---открыто.\\
+ 	Но $X\backslash (F\cup G) = (X\backslash F)\cap(X\backslash G)$ -- открыто как пересечение двух открытых.
+ 	\item $X\backslash(\underset{\alpha\in I}{\cap}F_{\alpha}) = \underset{\alpha\in I}{\cup}(X\backslash F_{\alpha})$ --- рассуждение аналогично (2.)
+
+\end{enumerate}
+\subsection{Теорема о соответствующей топологии}
+  Пусть $ \mathcal{F} \subseteq 2^{X}$  такое, что:
+\begin{enumerate}
+\item $\emptyset ,~X\in \mathcal{F}$
+\item $F,~G\in \mathcal{F} \Rightarrow F\cup G\in \mathcal{F}$
+\item $F_{\alpha}\in \mathcal{F} \Rightarrow \underset{\alpha\in I}{\cap}F_{\alpha}\in \mathcal{F}$
+\end{enumerate}
+$~~~~~~$Тогда существует единственная топология $\Omega$ такая, что $\mathcal{F}$ - множество замкнутых множеств.
+\\
+\textbf{Доказательство:}
+ \begin{enumerate}
+\item Докажем единственность:\\
+Если такая топология $\Omega$ существует, то $\Omega = \lbrace X\backslash F|~F\in \mathcal{F}$
+\\ Действительно, каждое такое множество должно входить в $\Omega$, и ни одно другое в неё входить не может. Таким образом, $\Omega$ - единственная возможная топология по построению.
+\item Теперь докажем, что построенная $\Omega$ действительно является топологией. Для этого проверим 3 необходимых свойства из определения.
+\begin{enumerate}
+\item $\emptyset,~X \in\Omega$ -- очевидно.
+\item $U = X\backslash F,~~V=X\backslash G; ~~F,~G\in \mathcal{F}$
+\\$U\cap V = (X\backslash F)\cap (X\backslash G)=X\backslash (F\cup G) \Rightarrow U\cap V\in\Omega.$ -- здесь мы пользуемся свойством (2).
+\item $U_{\alpha} = X\backslash F_{\alpha};~~~F_{\alpha}\in \mathcal{F}$
+\\$\underset{\alpha\in I}{\cup}U_{\alpha} = \underset{\alpha\in I}{\cup}X\backslash F_{\alpha} = X\backslash\underset{\alpha\in I}{\cap}F_{\alpha}$
+\end{enumerate} 
+\end{enumerate}
+
+
+
+
+\end{spacing}
+
+
+\end{document}
