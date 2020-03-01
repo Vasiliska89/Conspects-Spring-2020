@@ -1,72 +1,353 @@
-\documentclass[a4paper]{article}
-\usepackage[14pt]{extsizes} % для того чтобы задать нестандартный 14-ый размер шрифта
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{mathtools}
+\usepackage[margin=2cm]{geometry}
 \usepackage[russian]{babel}
-\usepackage{setspace,amsmath}
-\usepackage[left=20mm, top=15mm, right=15mm, bottom=15mm, nohead, footskip=10mm]{geometry} % настройки полей документа
  
 \begin{document} % начало документа
  
-% НАЧАЛО ТИТУЛЬНОГО ЛИСТА
-\begin{center}
-\hfill \break
-\large{МИНОБРНАУКИ РОССИИ}\\
-\footnotesize{ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ БЮДЖЕТНОЕ ОБРАЗОВАТЕЛЬНОЕ УЧРЕЖДЕНИЕ}\\ 
-\footnotesize{ВЫСШЕГО ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ}\\
-\small{\textbf{«ВОРОНЕЖСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ»}}\\
-\hfill \break
-\normalsize{Математический факультет}\\
- \hfill \break
-\normalsize{Кафедра теории функций и  геометрии}\\
-\hfill\break
-\hfill \break
-\hfill \break
-\hfill \break
-\large{Инвариантные подпространства растягивающего оператора\\ в пространстве Крейна}\\
-\hfill \break
-\hfill \break
-\hfill \break
-\normalsize{Магистерская диссертация\\
-\hfill \break
-Направление  010100 Математика\\
-\hfill \break
-Магистерская программа    Вещественный, комплексный и функциональный анализ}\\
-\hfill \break
-\hfill \break
-\end{center}
- 
-\normalsize{ \hspace{28pt} Допущено к защите в ГЭК  27.05.2015} \hfill \break
-\hfill \break
- 
-\normalsize{ 
-\begin{tabular}{cccc}
-Зав.кафедрой & \underline{\hspace{3cm}} &  д.физ.-мат.н.,  проф. & Е.М. Семёнов \\\\
-Обучающийся & \underline{\hspace{3cm}} & &С.М. Петров \\\\
-Руководитель & \underline{\hspace{3cm}}& д.физ.-мат.н., проф.&  Т.Я. Азизов \\\\
-\end{tabular}
-}\\
-\hfill \break
-\hfill \break
-\begin{center} Воронеж 2015 \end{center}
-\thispagestyle{empty} % выключаем отображение номера для этой страницы
- 
-% КОНЕЦ ТИТУЛЬНОГО ЛИСТА
- 
+ \begin{spacing}{1.5}
 \newpage
      
     \tableofcontents
     \newpage
-\section{Section}
+\section{Метрическое пространство. Метрика.}
+\underline{\textit{$\circ$ Определение:}}\\
 
-Dummy text
+  $d: X \times X\rightarrow \mathbb{R}$ --- \emph{\textit{метрика}}, если:
+ \begin{enumerate}
+\item $~d\left( x, y\right)\geq 0;~~ d\left( x, y\right) = 0\Longleftrightarrow x=y ,$
+\item $~d\left( x, y\right)=d\left( y, x\right) ,$
+\item $~d\left( x, y\right)+d\left( y, z\right)\geq d(x, z) .$
 
-\subsection{Subsection}
+\end{enumerate}
+ (X, d) --- \textit{метрическое пространство.}
+ \\
+ \subsection{Примеры метрик.}
 
-Dummy text
+ \begin{enumerate}
+\item V - векторное пространство, $<\cdot , \cdot >$ - скалярное произведение.
+ \\$ ~~~~~~\sphericalangle ~~d(\vec{v_{1}}, \vec{v_{2}}) = \sqrt{<\vec{v_{1}} - \vec{v_{2}},\vec{v_{1}} - \vec{v_{2}}> } = |\vec{v_{1}} - \vec{v_{2}}|$
+ \item (E, V) -- аффинное пространство, скалярное произведение на V.
+ \item \emph{$\circ$ Определение:}\\
+ \emph{Норма }$||\cdot||: V\rightarrow  \mathbb{R}$
+ \subitem $1. ~~||\vec{v}||\geq 0 ; ~~||\vec{v}|| = 0 \Longleftrightarrow \vec{v} = \vec{0} $
+ \subitem $ 2. ~~||\lambda\vec{v}|| = |\lambda|*||\vec{v}|| $
+ \subitem $ 3.~~||\vec{v_{1}} + \vec{v_{2}} ||\leq || \vec{v_{1}} || + ||\vec{v_{2}}||$
+ \\Тогда $d(\vec{v_{1}}, \vec{v_{2}}) = ||\vec{v_{1}} - \vec{v_{2}}||$ - метрика.
+ \\ \\3.1 $V = \mathbb{R}^{n} ,~~~ ||x||_{p} = (\sum |x_{i}|^{p})^{1/p},~~~ p\geq 1$
+ \subsubitem $~~~~~~~~~~||x||_{\inf}=\underset{1\leq i\leq n}{max}(|x_{i}|)$
+ \item $S^{2}$ --- сфера, 2 метрики:
+ \subsubitem $1. \mathbb{R}^{3}\rightarrow \mathbb{R}$ (Стандартная метрика),
+ \subsubitem 2. Угловая метрика.
+\end{enumerate}
+\end{spacing}
 \newpage
+\section{Открытые множества. Топологические пространства.}
+\subsection{Открытые множества. Свойства.}
+\underline{\textit{$\circ$ Определения:}}\\
+\begin{enumerate}
+\item $R>0,~B(x_{0}, R)\overset{def}{=}\lbrace x\in X|~~d(x_{0},x)<R\rbrace$ ---\emph{открытый шар радиуса R с центром $x_{0}$}.
+\item $S(x_{0}, R)\overset{def}{=}\lbrace x\in X|~~d(x_{0}, x)=R\rbrace$ ---\emph{сфера}.
+\item $(X, d)$ --метрическое пространство, $U\subseteq X$
+\\$U$ -- \emph{открыто}, если:
+\subitem $\forall x\in U \exists \varepsilon >0 :~~B(x, \varepsilon)\subseteq U.$
+\end{enumerate}
+
+\subsubsection{Теорема об открытости шара.}
+Открытый шар открыт.
+\begin{spacing}{1.5}
+ \textbf{Доказательство:}\\
+Рассмотрим $ x\in B(x_{0}, R).  \\
+  \varepsilon :=R-d(x_{0}, x)>0 $
+ (т.к. $x\in B(x_{0}, R)\Rightarrow d(x_{0}, x)<R)$
+ \\Пусть $y\in B(x, \varepsilon)\Rightarrow d(x, y)<\varepsilon = R-d(x_{0}, x) $
+ \\$d(x_{0}, y)\leq d(x_{0}, x)+d(x, y)<R\Rightarrow y\in B(x_{0}, R)\Rightarrow B(x, \varepsilon)\subseteq B(x_{0}, R). $
+\begin{flushright}
+$QED.$
+\end{flushright}
+\subsubsection{Теорема о свойствах $\Omega$}
+$\Omega \overset{def}{=} \lbrace U\subseteq X |~~ U$--открыто$\rbrace;~~X$--метрическое пространство.
+\\Тогда:
+\begin{enumerate}
+\item $\varnothing ,~X\in \Omega$
+\item $U,~V\in \Omega \Rightarrow U\cap V\in \Omega$
+\item $U_{\alpha}\in \Omega \Rightarrow \underset{\alpha\in I}{\cup}U_{\alpha}\in \Omega$
+\end{enumerate}
+ \textbf{Доказательство:}
+ \begin{enumerate}
+ 	\item 
+ 	$1)~\varnothing$---очевидно.
+ 	$2)~$Рассмотреть для каждого элемента $\varepsilon=1$ (или любой другой, далее очевидно.)
+ 	\item Рассмотрим $ y\in U\cap V$
+ 	\\$y\in U \Rightarrow \exists \varepsilon_{1}>0:\forall x\in X~~ d(x, y)<\varepsilon_{1}\Rightarrow x\in U$
+ 	\\$y\in V \Rightarrow \exists \varepsilon_{2}>0:\forall x\in X~~ d(x, y)<\varepsilon_{2}\Rightarrow x\in V$
+ 	\\$\sphericalangle \varepsilon:=min(\varepsilon_{1}, \varepsilon_{2}).$
+ 	\\Далее очевидно.
+ 	\item $x\in \underset{\alpha\in I}{\cup}U_{\alpha}\Rightarrow \exists i\in I: x\in U_{i}\Rightarrow\exists\varepsilon : (\forall y\in X~~ d(x, y)<\varepsilon\Rightarrow y\in U_{i}\Rightarrow y\in \underset{\alpha\in I}{\cup}U_{\alpha}) $
+ 	\begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\subsection{Топологическое пространство. Топология.}
+ \underline{\textit{$\circ$ Определение:}}\\
+ $(X, \Omega)$--- \emph{топологическое пространство}, если:
+ \begin{enumerate}
+ \item $\varnothing,~X\in \Omega$
+ \item $U, V\in \Omega \Rightarrow U\cap V\in \Omega$
+ \item $U_{\alpha}\in \Omega \Rightarrow \underset{\alpha\in I}{\cup}U_{\alpha}\in \Omega$
  
+ \end{enumerate}
+  $\Omega$ -- \emph{топология}, элементы $\Omega$ -- \emph{открытые.}
+\subsubsection{Примеры топологических пространств.}
+\begin{enumerate}
+\item $\Omega=2^{X}$ -- \emph{дискретная топология.}\\
+\underline{\emph{$\bullet$ Упражнение: }} Доказать, что \emph{дискретной метрике} $d(x, y) = \begin{cases}
+  0,  &  x=y  \\
+  1, &  x\neq y 
+\end{cases}$ соответствует дискретная топология.
+\item $\Omega=\lbrace\varnothing,~X\rbrace$ - \emph{антидискретная топология}
+\item $X=\mathbb{R};~~ \Omega=\lbrace (a, +\inf)|~~a\in \mathbb{R} \rbrace\cup\lbrace\varnothing,~ \mathbb{R}\rbrace $ - \emph{стрелка}
+\end{enumerate}
+\subsection{Окрестности. Теорема о дополнении подмножества.}
+\underline{\textit{$\circ$ Определения:}}\\
+$x_{0}\in X.$
+\begin{enumerate}
+\item \emph{Окрестность точки $x_{0}$} --- произвольное открытое множество, содержащее $x_{0}.$
+\item \emph{$\varepsilon$--окрестность (.) $x_{0}$}--$B(x_{0},\varepsilon).$ Определено только для метрических пространств.
+\end{enumerate}
+\subsubsection{Теорема о дополнении подмножества}
+$F\subset X$;  $X$ --- метрическое пространство
+\begin{enumerate}
+\item $(\forall x~~ \forall\varepsilon~~(B(x,\varepsilon)\backslash\lbrace x\rbrace\cap F\neq\varnothing)\Rightarrow x\in F)\Longleftrightarrow X\backslash F$--открыто.
+\item $X$--- топологическое пространство.\\
+$((\forall U_{x}$---откр. $U_{x}\cap F\backslash\lbrace x\rbrace\neq \varnothing) \Rightarrow x\in F)\Longleftrightarrow X\backslash F$ --- открыто.
+\end{enumerate}
+\textbf{Доказательство:}
+ \begin{enumerate}
+ \item Если $X$--- метрическое пространство, то $1.\Longleftrightarrow 2.~:$
+ \\ $ 1.\Leftarrow 2.:$ -- очевидно
+ ; $ 1.\Rightarrow 2.:$
+ \\Рассмотрим $ U_{x}$ --откр. $\Rightarrow \exists\varepsilon: B(x, \varepsilon)\subseteq U_{x}\Rightarrow((B(x, \varepsilon)\backslash\lbrace x\rbrace ) \cap F\subset U_{x}\backslash\lbrace x\rbrace\cap F\Rightarrow U_{x}\backslash\lbrace x\rbrace\cap F\neq \varnothing.$
+ \begin{flushright}
+$QED.$
+\end{flushright}
+ \end{enumerate}
+Достаточно доказать (2.)
+ \begin{enumerate}
+ \item $\underline{\Rightarrow}$, т.е. $x\notin F \Rightarrow \exists U_{x}: U_{x}\backslash \lbrace x\rbrace\cap F=\varnothing\Rightarrow U_{x}\cap F=\varnothing\Rightarrow U_{x}\subseteq X\backslash F\Rightarrow \underset{x\in X\backslash F}{\cup}U_{x}\subseteq X\backslash F  $
+ ; ''$\supseteq$''- тоже(оч.), $\Rightarrow\underset{x\in X\backslash F}{\cup}U_{x}= X\backslash F$, но $\cup U$ - откр.
+ \begin{flushright}
+$QED.$
+\end{flushright}
+\item $\underline{\Leftarrow} :$
+\\ Пусть $X\backslash F$--откр. и $\forall U_{x}$--откр.   $(U_{x}\backslash\lbrace x\rbrace\cap F\neq\varnothing)$ 
+\\Допустим, что $x\notin F~\Rightarrow ~ x\in (X\backslash F)$
+\\Тогда $\varnothing \neq ((X\backslash F)\backslash\lbrace x\rbrace)\cap F = ((X\backslash F)\cap F)\backslash \lbrace x\rbrace = \varnothing.$ Противоречие.\footnote{Последняя часть доказательства является авторской. Лекционный вариант утерян бесследно.}
+ \begin{flushright}
+$QED.$
+\end{flushright}
+  \end{enumerate}
+  \section{Замкнутые множества.}
+\underline{\textit{$\circ$ Определение:}}\\
+$F$ --- \emph{Замкнуто} $\Longleftrightarrow X\backslash F$ --- открыто.
+\subsection{Теорема о множестве замкнутых множеств}
+$ \mathcal{F} $ --- множество замкнутых множеств.
+\\Тогда:
+\begin{enumerate}
+\item $\varnothing ,~X\in \mathcal{F}$
+\item $F,~G\in \mathcal{F} \Longrightarrow F\cup G\in \mathcal{F}$
+\item $F_{\alpha}\in \mathcal{F} \Longrightarrow \underset{\alpha\in I}{\cap}F_{\alpha}\in \mathcal{F}$
+\end{enumerate}
+ \textbf{Доказательство:}
+ \begin{enumerate}
+ 	\item очевидно: $(X\backslash X = \varnothing~~;~~X\backslash \varnothing = X)$
+ 	\item $F\cup G$ --- замкнуто $\Longleftrightarrow X\backslash (F\cup G)$ ---открыто.\\
+ 	Но $X\backslash (F\cup G) = (X\backslash F)\cap(X\backslash G)$ -- открыто как пересечение двух открытых.
+ 	\item $X\backslash(\underset{\alpha\in I}{\cap}F_{\alpha}) = \underset{\alpha\in I}{\cup}(X\backslash F_{\alpha})$ --- рассуждение аналогично (2.)
+
+\end{enumerate}
+\subsection{Теорема о соответствующей топологии}
+  Пусть $ \mathcal{F} \subseteq 2^{X}$  такое, что:
+\begin{enumerate}
+\item $\varnothing ,~X\in \mathcal{F}$
+\item $F,~G\in \mathcal{F} \Longrightarrow F\cup G\in \mathcal{F}$
+\item $F_{\alpha}\in \mathcal{F} \Longrightarrow \underset{\alpha\in I}{\cap}F_{\alpha}\in \mathcal{F}$
+\end{enumerate}
+$~~~~~~$Тогда существует единственная топология $\Omega$ такая, что $\mathcal{F}$ - множество замкнутых множеств.
+\\
+\textbf{Доказательство:}
+ \begin{enumerate}
+\item Докажем единственность:\\
+Если такая топология $\Omega$ существует, то $\Omega = \lbrace X\backslash F|~F\in \mathcal{F}\rbrace$.
+\\ Действительно, каждое такое множество должно входить в $\Omega$, и ни одно другое в неё входить не может. Таким образом, $\Omega$ - единственная возможная топология по построению.
+\item Теперь докажем, что построенная $\Omega$ действительно является топологией. Для этого проверим 3 необходимых свойства из определения.
+\begin{enumerate}
+\item $\varnothing,~X \in\Omega$ -- очевидно.
+\item $U = X\backslash F,~~V=X\backslash G; ~~F,~G\in \mathcal{F}$
+\\$U\cap V = (X\backslash F)\cap (X\backslash G)=X\backslash (F\cup G) \Longrightarrow U\cap V\in\Omega.$ -- здесь мы пользуемся свойством (2).
+\item $U_{\alpha} = X\backslash F_{\alpha};~~~F_{\alpha}\in \mathcal{F}$
+\\$\underset{\alpha\in I}{\cup}U_{\alpha} = \underset{\alpha\in I}{\cup}X\backslash F_{\alpha} = X\backslash\underset{\alpha\in I}{\cap}F_{\alpha}$ -- здесь мы пользуемся свойством (3).
+\end{enumerate} 
+\end{enumerate}
 \newpage
-\section{Введение}
- 
+\section{Внутренность, замыкание и граница}
+\underline{\textit{$\circ$ Определения:}}\\
+$A\subseteq X$
+\begin{enumerate}
+\item $x$ --- \emph{Внутренняя точка А}, если $\exists ~U_{x}\in\Omega:~U_{x}\subseteq A$ , т.е. точка входит в А с некоторой окрестностью. Заметим, что условие можно переписать как $(U_{x}\cap(X\backslash A))=\varnothing$
+\item $x$ --- \emph{Внешняя точка А}, если $\exists ~U_{x}\in\Omega:~U_{x}\subseteq X\backslash A$ , т.е. точка входит в дополнение А с некоторой окрестностью. Иначе говоря, $U_{x}\cap A=\varnothing$.
+\item $x$ --- \emph{Граничная точка А}, если $\forall ~U_{x}\in\Omega:~(U_{x}\cap A\neq\varnothing) ~\& ~ (U_{x}\cap(X\backslash A)\neq\varnothing)$ , т.е. любая окрестность пересекает и А, и дополнение А.
+\\ \underline{\emph{$\bullet$ Упражнение: }} Доказать, что в случае метрических пространств определения останутся эквивалентными при замене окрестностей на шаровые.
+\item $x$ --- \emph{Точка прикосновения А}, если $\forall~U_{x}~~U_{x}\cap A\neq \varnothing$
+\item \emph{Внутренность} $Int(A)$ --- наибольшее по включению открытое множество, содержащееся в А.
+\\ \underline{\emph{Примечание:}} Также используется обозначение $\overset{\circ}{A}$.
+\item \emph{Замыкание} $Cl(A)$ --- наименьшее по включению замкнутое множество, содержащее А.
+\\ \underline{\emph{Примечание:}} Также используется обозначение $\overline{A}$ и $cl(A)$.
+\item \emph{Граница} $\partial A$ --- множество граничных точек А. 
+\\ \underline{\emph{Примечание:}} Также используется обозначение $Fr(A)$. Если необходимо подчеркнуть, к какому всеобъемлещему множеству относится граница, пишут $\partial_{X}A$.
+\end{enumerate}
+\subsection{Существование внутренности и замыкания}
+\begin{enumerate}
+\item $Int(A)$ существует и $Int(A)\overset{1}{=}\underset{\underset{U\in\Omega}{U\subseteq A,}}{\cup}U\overset{2}{=}\lbrace ~x~ |~~x$-- внутр.$\rbrace$
+\\
+\textbf{Доказательство:}
+\\ \underline{1.} Первое равенство справедливо, т.к. объединение открытых множеств открыто, содержится в А и любое открытое подмножество А лежит в нем по определению.
+\\ \underline{2.} Покажем, что второе множество содержится в первом и наоборот.
+\begin{enumerate}
+\item Пусть $x$ --- внутренняя точка А. Тогда существует $U_{x}\subseteq A$. Но $U_{x}\subseteq \underset{\underset{U\in\Omega}{U\subseteq A,}}{\cup}U$, значит $x\in \underset{\underset{U\in\Omega}{U\subseteq A,}}{\cup}U$, то есть $\lbrace ~x~ |~~x$-- внутр.$\rbrace\subseteq \underset{\underset{U\in\Omega}{U\subseteq A,}}{\cup}U$
+\item Пусть точка $x$ лежит в нашем объединении. Значит существует открытое множество, в котором она лежит. Но тогда x - внутренняя точка А, то есть любая точка из объединения является внутренней, а значит $\lbrace ~x~ |~~x$-- внутр.$\rbrace\supseteq \underset{\underset{U\in\Omega}{U\subseteq A,}}{\cup}U$.
+\\Значит множества действительно равны. Заметим, что иногда последняя часть равенства используется в качестве определения.
+\end{enumerate}
+\item $Cl(A)$ существует и $Cl(A)\overset{1}{=}\underset{\underset{F\in\mathcal{F}}{ F\supseteq A,}}{\cap}F\overset{2}{=}\lbrace x|~~x$---т. прикосн. A$\rbrace$.
+\\ \textbf{Доказательство:}
+\\$R:=\underset{\underset{F\in\mathcal{F}}{ F\supseteq A,}}{\cap}F\supseteq A$, R - замкнуто как пересечение замкнутых. Если замкнутое множество G содержит А, то G содержит и R, ведь G входит в пересечение. Значит R - действительно наименьшее (по включению) замкнутое множество, содержащее А.
+\end{enumerate}
+\subsection{Свойства замыкания, внутренности и границы.}
+\begin{enumerate}
+\item $X\backslash Cl(A) = Int(X\backslash A)$. - это очевидно, но давайте докажем:
+\\ \textbf{Доказательство:}
+\\ $X\backslash Cl(A) = X\backslash(\cap F)$\footnote{Здесь и далее индексы объединения/пересечения/суммирования пишутся только в первом употреблении и далее опускаются чтобы не загромождать текст. Как правило всё ясно из контекста и без них.}$=\cup(X\backslash F)=[U = X\backslash F$ -открыто$]=\underset{U\subseteq(X\backslash A)}{\cup U}=Int(X\backslash A)$ .
+\item $X\backslash Cl(A)$ - множество всех внешних точек А. Следует напрямую из пункта 1.
+\item $X\backslash Int(A) = Cl(X\backslash A)$. Доказывается абсолютно аналогично пункту 1.
+\end{enumerate}
+Выпишем ещё несколько свойств, оставив часть из них читателю в качестве упражнения.
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item A - откр. $\Longleftrightarrow ~A = Int(A)$
+\item A - замкнуто $\Longleftrightarrow A = Cl(A)$
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item $A\subseteq B \Longrightarrow Int(A)\subseteq Int(B)$
+\item $A\subseteq B \Longrightarrow Cl(A)\subseteq Cl(A)$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $Int(A\cap B) = Int(A)\cap Int(B)$
+\item $Cl(A\cup B) = Cl(A)\cup Cl(B)$
+\end{enumerate}
+\item
+\begin{enumerate}
+\item $Int(A\cup B) \supseteq Int(A)\cup Int(B)$
+\item $Cl(A\cap B) \subseteq Cl(A)\cap Cl(B)$
+\end{enumerate}
+\end{enumerate}
+Приведем лишь доказательства пунктов (а), пункт (b) же выводится либо из (а), либо аналогично (а).
+\\ Итак, начнем.
+\begin{enumerate}
+\item Как и всегда в таких теоремах, разобьем утверждение на 2 и докажем их по отдельности.
+\\ $\underline{\Leftarrow}$: На самом деле очевидно, т.к. $A = Int(A) = \cup U_{x}$ --- открыто как объединение открытых.
+\\ $\underline{\Rightarrow}$: $А$ --- открыто, $A\subseteq A$. Значит А входит в объединение открытых подмножеств, содержащихся в А, откуда очевидно $A = Int(A)$.
+\item Воспользуемся другим определением внутренности: $Int(A) = \lbrace~x|~~x$ - внутр. в А$\rbrace$.
+\\ Заметим, что если x - внутр. в А, $A\subseteq B$, то x - внутр. в B ($U_{x}\subseteq A\subseteq B$). Откуда $Int(A) = \lbrace~x|~~x$ - внутр. в А$\rbrace\subseteq\lbrace~x|~~x$ - внутр. в B$\rbrace=Int(B)$.
+\item Существует по меньшей мере 2 доказательства данного факта. Мы приведем лишь один, оставив второй на совесть читателя.
+\\ Как и всегда в таких ситуациях, разобьем утверждение на 2 и докажем их по отдельности.
+\\ $\underline{\subseteq}$: $A\cap B\subseteq A\Longrightarrow Int(A\cap B)\subseteq Int(A)$ (по пункту (2)).
+\\Аналогично,  $Int(A\cap B)\subseteq Int(B)$, откуда $Int(A\cap B)\subseteq Int(A)\cap Int(B)$.
+\\ $\underline{\supseteq}$: \begin{equation*}
+\begin{cases}
+    & A\supseteq Int(A)\\
+    & B\supseteq Int(B)
+ \end{cases}~~~~~~~|\Longrightarrow A\cap B \supseteq Int(A)\cap Int(B)\Longrightarrow Int(A\cap B)\supseteq Int(A)\cap Int(B)
+\end{equation*}
+(здесь используются сразу пункты 1 и 2)
+\item Пусть $x$ --- внутренняя точка А. Тогда она внутренняя и для $A\cup B$, значит $Int(A)\subseteq Int(A\cup B)$. Аналогично для $Int(B)$.
+\\ Тогда $Int(A)\cup Int(B)\subseteq Int(A\cup B)\cup Int(A\cup B)=Int(A\cup B)$.
+ \begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\section{База топологии}
+\underline{\textit{$\circ$ Определение:}}\\
+$(X,~\Omega)$ - топологическое пространство.
+$\Sigma\subseteq\Omega$ --- \emph{База топологии}, если любой элемент из $\Omega$ представим в виде объединения некоторых элементов из $\Sigma$.
+\subsection{Критерий базы топологии $\Omega$}
+Оказывается, что определение базы $\Sigma$ для топологии $\Omega$ эквивалентно совокупности следующих двух условий:
+\begin{enumerate}
+\item $\forall U\in\Omega~\forall x\in U \exists S\in \Sigma:~x\in S\subseteq U$
+\item $\forall S\in \Sigma:~~ S$ --- откр.
+\end{enumerate}
+\textbf{Доказательство:}\\
+$\underline{\Rightarrow}$: 
+\begin{enumerate}
+\item По условию, $\forall U\in \Omega~\exists I:~\underset{\alpha\in I}{\cup}S_{\alpha}\in \Sigma:~~U=\underset{\alpha\in I}{\cup}S_{\alpha}$
+\\ Тогда $x\in \underset{\alpha\in I}{\cup}S_{\alpha}\Longrightarrow \exists\alpha_{0}\in I:~x\in S_{\alpha_{0}}$, но $S_{\alpha_{0}}\subseteq\underset{\alpha\in I}{\cup}S_{\alpha}=U$. $S = S_{\alpha_{0}}$ - подходит.
+\item очевидно из определения.
+\end{enumerate}
+$\underline{\Leftarrow}$: \begin{enumerate}
+\item[]По усновию, $\forall x\in U \exists S_{x}\in\Sigma:~~x\in S_{x}\subseteq U$
+\\Но тогда $U\subseteq\underset{\alpha\in I}{\cup}S_{\alpha}\subseteq U~~\Longleftrightarrow~\underset{\alpha\in I}{\cup}S_{\alpha}=U$.
+\end{enumerate}
+ \underline{\emph{$\bullet$ Упражнение: }} Докажите, что шары - база метрической топологии.
+\subsection{Критерий базы некоторой топологии}
+Оказывается, что $\Sigma$ --- база некоторой топологии тогда и только тогда, когда выполняются следующие два условия:
+\begin{enumerate}
+\item $\forall x\in X ~\exists S_{x}:~~x\in S_{x}$
+\item $\forall S_{1,2}\in \Sigma: ~~\forall x\in S_{1}\cap S_{2}~~ \exists S_{x}\in\Sigma:~x\in S_{x}\subseteq S_{1}\cap S_{2}$
+\\ Причем заданная топология единственна.
+\end{enumerate}
+ \textbf{Доказательство:}
+\begin{enumerate}
+\item[$\underline{\Rightarrow}$]:
+\begin{enumerate}
+\item[1.] $\forall x\in X\in \Omega\Longrightarrow~\exists I:~ S_{\alpha}\in \Sigma ~~\&~~ X = \underset{\alpha\in I}{\cup S_{\alpha}} $
+\\$|\Rightarrow~~ \forall x\in X \exists \alpha:~~x\in S_{\alpha}$.
+\item[2.] $S_{1}\cap S_{2}$  - откр. $\Longrightarrow~~\exists I: S_{\alpha}\in\Sigma;$\\
+$S_{1}\cap S_{2}=\underset{\alpha\in I}{\cup S_{\alpha}}~\Longrightarrow \exists\alpha:~x\in S_{\alpha}\subseteq S_{1}\cap S_{2}$. 
+\end{enumerate}
+\item[$\underline{\Leftarrow}$]:
+\\ Если топология существует, то $\Omega = {\underset{\alpha\in I}{\cap}S_{\alpha}|~~S_{\alpha}\in\Sigma}$
+\\ Если это топология, то $\Sigma$ --- её база. Проверим, что $\Omega$ --- действительно топология.
+\begin{enumerate}
+\item[1)] $\varnothing$ --- "пустое объединение"($|I|=0$).
+\\X есть по свойству 1. Например, можно взять объединение всех S из $\Omega$.
+\item[2)]$U, V\in\Omega,~\Longleftrightarrow ~ U=\cup S_{\alpha}, V = \cup S_{\beta}$.
+\\ $U\cap V =(\cup S_{\alpha})\cap(\cup S_{\beta}) = \cup(S_{\alpha}\cap S_{\beta})\fbox{=} $
+\\ $\forall x\in S_{\alpha}\cap S_{\beta}~~\exists S_{x}: x\in S_{x}\subseteq S_{\alpha}\cap S_{\beta}$      (свойство 2)
+\\ $S_{\alpha}\cap S_{\beta}\subseteq\underset{x\in S_{\alpha}\cap S_{\beta}}{\cup}S_{x}\subseteq S_{\alpha}\cap S_{\beta}$
+\\ $\fbox{=}\underset{\alpha,\beta}{\cup}(\underset{x\in S_{\alpha}\cap S_{\beta}}{\cup}S_{x})$ - лежит в $\Omega$. Объясним это в пункте 3, попутно доказав его.
+\item[3)] $\underset{\beta\in I}{\cup}S_{\beta} = \underset{\beta\in I}{\cup}(\underset{\alpha\in I_{b}}{\cup}S_{\alpha})$ - это объединение объединений множеств из базы. Поскольку объединение ассоциативно, это просто объединение множеств из базы. А значит, оно лежит в $\Omega$.
+\begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+ \end{spacing}
  
 \end{document}  % КОНЕЦ ДОКУМЕНТА !

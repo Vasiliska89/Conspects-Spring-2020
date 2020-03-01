@@ -2,3 +2,9 @@
 \contentsline {section}{\numberline {1}Замкнутые множества.}{3}%
 \contentsline {subsection}{\numberline {1.1}Теорема о множестве замкнутых множеств}{3}%
 \contentsline {subsection}{\numberline {1.2}Теорема о соответствующей топологии}{3}%
+\contentsline {section}{\numberline {2}Внутренность, замыкание и граница}{5}%
+\contentsline {subsection}{\numberline {2.1}Существование внутренности и замыкания}{5}%
+\contentsline {subsection}{\numberline {2.2}Свойства замыкания, внутренности и границы.}{6}%
+\contentsline {section}{\numberline {3}База топологии}{7}%
+\contentsline {subsection}{\numberline {3.1}Критерий базы топологии $\Omega $}{7}%
+\contentsline {subsection}{\numberline {3.2}Критерий базы некоторой топологии}{8}%

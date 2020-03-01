@@ -79,14 +79,14 @@ $QED.$
 $\Omega \overset{def}{=} \lbrace U\subseteq X |~~ U$--открыто$\rbrace;~~X$--метрическое пространство.
 \\Тогда:
 \begin{enumerate}
-\item $\emptyset ,~X\in \Omega$
+\item $\varnothing ,~X\in \Omega$
 \item $U,~V\in \Omega \Rightarrow U\cap V\in \Omega$
 \item $U_{\alpha}\in \Omega \Rightarrow \underset{\alpha\in I}{\cup}U_{\alpha}\in \Omega$
 \end{enumerate}
  \textbf{Доказательство:}
  \begin{enumerate}
  	\item 
- 	$1)~\emptyset$---очевидно.
+ 	$1)~\varnothing$---очевидно.
  	$2)~$Рассмотреть для каждого элемента $\varepsilon=1$ (или любой другой, далее очевидно.)
  	\item Рассмотрим $ y\in U\cap V$
  	\\$y\in U \Rightarrow \exists \varepsilon_{1}>0:\forall x\in X~~ d(x, y)<\varepsilon_{1}\Rightarrow x\in U$
@@ -102,7 +102,7 @@ $QED.$
  \underline{\textit{$\circ$ Определение:}}\\
  $(X, \Omega)$--- \emph{топологическое пространство}, если:
  \begin{enumerate}
- \item $\emptyset,~X\in \Omega$
+ \item $\varnothing,~X\in \Omega$
  \item $U, V\in \Omega \Rightarrow U\cap V\in \Omega$
  \item $U_{\alpha}\in \Omega \Rightarrow \underset{\alpha\in I}{\cup}U_{\alpha}\in \Omega$
  
@@ -115,8 +115,8 @@ $QED.$
   0,  &  x=y  \\
   1, &  x\neq y 
 \end{cases}$ соответствует дискретная топология.
-\item $\Omega=\lbrace\emptyset,~X\rbrace$ - \emph{антидискретная топология}
-\item $X=\mathbb{R};~~ \Omega=\lbrace (a, +\inf)|~~a\in \mathbb{R} \rbrace\cup\lbrace\emptyset,~ \mathbb{R}\rbrace $ - \emph{стрелка}
+\item $\Omega=\lbrace\varnothing,~X\rbrace$ - \emph{антидискретная топология}
+\item $X=\mathbb{R};~~ \Omega=\lbrace (a, +\inf)|~~a\in \mathbb{R} \rbrace\cup\lbrace\varnothing,~ \mathbb{R}\rbrace $ - \emph{стрелка}
 \end{enumerate}
 \subsection{Окрестности. Теорема о дополнении подмножества.}
 \underline{\textit{$\circ$ Определения:}}\\
@@ -128,31 +128,31 @@ $x_{0}\in X.$
 \subsubsection{Теорема о дополнении подмножества}
 $F\subset X$;  $X$ --- метрическое пространство
 \begin{enumerate}
-\item $(\forall x~~ \forall\varepsilon~~(B(x,\varepsilon)\backslash\lbrace x\rbrace\cap F\neq\emptyset)\Rightarrow x\in F)\Longleftrightarrow X\backslash F$--открыто.
+\item $(\forall x~~ \forall\varepsilon~~(B(x,\varepsilon)\backslash\lbrace x\rbrace\cap F\neq\varnothing)\Rightarrow x\in F)\Longleftrightarrow X\backslash F$--открыто.
 \item $X$--- топологическое пространство.\\
-$((\forall U_{x}$---откр. $U_{x}\cap F\backslash\lbrace x\rbrace\neq \emptyset) \Rightarrow x\in F)\Longleftrightarrow X\backslash F$ --- открыто.
+$((\forall U_{x}$---откр. $U_{x}\cap F\backslash\lbrace x\rbrace\neq \varnothing) \Rightarrow x\in F)\Longleftrightarrow X\backslash F$ --- открыто.
 \end{enumerate}
 \textbf{Доказательство:}
  \begin{enumerate}
  \item Если $X$--- метрическое пространство, то $1.\Longleftrightarrow 2.~:$
  \\ $ 1.\Leftarrow 2.:$ -- очевидно
  ; $ 1.\Rightarrow 2.:$
- \\Рассмотрим $ U_{x}$ --откр. $\Rightarrow \exists\varepsilon: B(x, \varepsilon)\subseteq U_{x}\Rightarrow((B(x, \varepsilon)\backslash\lbrace x\rbrace ) \cap F\subset U_{x}\backslash\lbrace x\rbrace\cap F\Rightarrow U_{x}\backslash\lbrace x\rbrace\cap F\neq \emptyset.$
+ \\Рассмотрим $ U_{x}$ --откр. $\Rightarrow \exists\varepsilon: B(x, \varepsilon)\subseteq U_{x}\Rightarrow((B(x, \varepsilon)\backslash\lbrace x\rbrace ) \cap F\subset U_{x}\backslash\lbrace x\rbrace\cap F\Rightarrow U_{x}\backslash\lbrace x\rbrace\cap F\neq \varnothing.$
  \begin{flushright}
 $QED.$
 \end{flushright}
  \end{enumerate}
 Достаточно доказать (2.)
  \begin{enumerate}
- \item $\underline{\Rightarrow}$, т.е. $x\notin F \Rightarrow \exists U_{x}: U_{x}\backslash \lbrace x\rbrace\cap F=\emptyset\Rightarrow U_{x}\cap F=\emptyset\Rightarrow U_{x}\subseteq X\backslash F\Rightarrow \underset{x\in X\backslash F}{\cup}U_{x}\subseteq X\backslash F  $
+ \item $\underline{\Rightarrow}$, т.е. $x\notin F \Rightarrow \exists U_{x}: U_{x}\backslash \lbrace x\rbrace\cap F=\varnothing\Rightarrow U_{x}\cap F=\varnothing\Rightarrow U_{x}\subseteq X\backslash F\Rightarrow \underset{x\in X\backslash F}{\cup}U_{x}\subseteq X\backslash F  $
  ; ''$\supseteq$''- тоже(оч.), $\Rightarrow\underset{x\in X\backslash F}{\cup}U_{x}= X\backslash F$, но $\cup U$ - откр.
  \begin{flushright}
 $QED.$
 \end{flushright}
 \item $\underline{\Leftarrow} :$
-\\ Пусть $X\backslash F$--откр. и $\forall U_{x}$--откр.   $(U_{x}\backslash\lbrace x\rbrace\cap F\neq\emptyset)$ 
+\\ Пусть $X\backslash F$--откр. и $\forall U_{x}$--откр.   $(U_{x}\backslash\lbrace x\rbrace\cap F\neq\varnothing)$ 
 \\Допустим, что $x\notin F~\Rightarrow ~ x\in (X\backslash F)$
-\\Тогда $\emptyset \neq ((X\backslash F)\backslash\lbrace x\rbrace)\cap F = ((X\backslash F)\cap F)\backslash \lbrace x\rbrace = \emptyset.$ Противоречие.\footnote{Последняя часть доказательства является авторской. Лекционный вариант утерян бесследно.}
+\\Тогда $\varnothing \neq ((X\backslash F)\backslash\lbrace x\rbrace)\cap F = ((X\backslash F)\cap F)\backslash \lbrace x\rbrace = \varnothing.$ Противоречие.\footnote{Последняя часть доказательства является авторской. Лекционный вариант утерян бесследно.}
  \begin{flushright}
 $QED.$
 \end{flushright}
