@@ -1,22 +1,23 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  2 MAR 2020 03:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.2.17)  14 APR 2020 10:41
 entering extended mode
 **./full.tex
 (full.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
-("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.cls"
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
 File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 )
 \c@part=\count167
-\c@section=\count168
-\c@subsection=\count169
-\c@subsubsection=\count170
-\c@paragraph=\count171
-\c@subparagraph=\count172
-\c@figure=\count173
-\c@table=\count174
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
@@ -27,24 +28,24 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
  ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count175
-\c@Blindtext=\count176
-\c@blind@countparstart=\count177
-\blind@countxx=\count178
-\blindtext@numBlindtext=\count179
-\blind@countyy=\count180
-\c@blindlist=\count181
-\c@blindlistlevel=\count182
-\c@blindlist@level=\count183
-\blind@listitem=\count184
-\c@blind@listcount=\count185
-\c@blind@levelcount=\count186
-\blind@mathformula=\count187
-\blind@Mathformula=\count188
-\c@blind@randomcount=\count189
-\c@blind@randommax=\count190
-\c@blind@pangramcount=\count191
-\c@blind@pangrammax=\count192
+\c@blindtext=\count176
+\c@Blindtext=\count177
+\c@blind@countparstart=\count178
+\blind@countxx=\count179
+\blindtext@numBlindtext=\count180
+\blind@countyy=\count181
+\c@blindlist=\count182
+\c@blindlistlevel=\count183
+\c@blindlist@level=\count184
+\blind@listitem=\count185
+\c@blind@listcount=\count186
+\c@blind@levelcount=\count187
+\blind@mathformula=\count188
+\blind@Mathformula=\count189
+\c@blind@randomcount=\count190
+\c@blind@randommax=\count191
+\c@blind@pangramcount=\count192
+\c@blind@pangrammax=\count193
 ) ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 ) ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
@@ -87,13 +88,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count193
+\inf@bad=\count194
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count194
-\leftroot@=\count195
+\uproot@=\count195
+\leftroot@=\count196
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count196
-\DOTSCASE@=\count197
+\classnum@=\count197
+\DOTSCASE@=\count198
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
@@ -102,15 +103,15 @@ LaTeX Info: Redefining \cdots on input line 610.
 \big@size=\dimen137
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count198
-\c@MaxMatrixCols=\count199
+\macc@depth=\count199
+\c@MaxMatrixCols=\count266
 \dotsspace@=\muskip16
-\c@parentequation=\count266
-\dspbrk@lvl=\count267
+\c@parentequation=\count267
+\dspbrk@lvl=\count268
 \tag@help=\toks18
-\row@=\count268
-\column@=\count269
-\maxfields@=\count270
+\row@=\count269
+\column@=\count270
+\maxfields@=\count271
 \andhelp@=\toks19
 \eqnshift@=\dimen138
 \alignsep@=\dimen139
@@ -138,15 +139,15 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 ) ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count271
-\calc@Bcount=\count272
+\calc@Acount=\count272
+\calc@Bcount=\count273
 \calc@Adimen=\dimen144
 \calc@Bdimen=\dimen145
 \calc@Askip=\skip52
 \calc@Bskip=\skip53
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count273
+\calc@Ccount=\count274
 \calc@Cskip=\skip54
 )
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.sty
@@ -157,7 +158,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count274
+\g_MT_multlinerow_int=\count275
 \l_MT_multwidth_dim=\dimen146
 \origjot=\skip55
 \l_MT_shortvdotswithinadjustabove_dim=\dimen147
@@ -175,9 +176,9 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
 Package: iftex 2019/11/07 v1.0c TeX engine tests
 ))
-\Gm@cnth=\count275
-\Gm@cntv=\count276
-\c@Gm@tempcnt=\count277
+\Gm@cnth=\count276
+\Gm@cntv=\count277
+\c@Gm@tempcnt=\count278
 \Gm@bindingoffset=\dimen153
 \Gm@wd@mp=\dimen154
 \Gm@odd@mp=\dimen155
@@ -208,13 +209,13 @@ Language: russian 2017/08/12 1.3j Russian support for the Babel system
 
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
 File: babel.def 2020/02/14 3.40 Babel common definitions
-\babel@savecnt=\count278
+\babel@savecnt=\count279
 \U@D=\dimen161
 
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.def"
 )
 \bbl@readstream=\read2
-\bbl@dirlevel=\count279
+\bbl@dirlevel=\count280
 )
 
 Package babel Warning: No Cyrillic font encoding has been loaded so far.
@@ -429,40 +430,6 @@ File: t2aenc.dfu 2019/11/14 v1.2k UTF-8 support for inputenc
 Package babel Info: Making " an active character on input line 120.
 Package babel Info: Default for \cyrdash is provided on input line 157.
 ))
-("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-p
-dfmode.def"
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count280
-\l__pdf_internal_box=\box47
-) (full.aux
-LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 4
-.
-
-("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cyrillic\t2acmr.fd"
-File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-))
-\openout1 = `full.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty
-"
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
-
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.sty
 "
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
@@ -478,30 +445,42 @@ Package graphics Info: Driver file: pdftex.def on input line 105.
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdftex.d
 ef"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-p
+dfmode.def"
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count281
+\l__pdf_internal_box=\box47
+) (full.aux
+LaTeX Font Info:    Trying to load font information for T2A+cmr on input line 4
+.
 
-("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.
-mkii"
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen162
-\scratchbox=\box48
-\nofMPsegments=\count282
-\nofMParguments=\count283
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen163
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
-\everyMPtoPDFconversion=\toks25
-)))
-("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf
--base.sty"
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-)
-\Gin@req@height=\dimen164
-\Gin@req@width=\dimen165
+("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cyrillic\t2acmr.fd"
+File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+))
+\openout1 = `full.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.sty
+"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -537,7 +516,28 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(full.toc
+
+("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.
+mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count282
+\scratchdimen=\dimen164
+\scratchbox=\box48
+\nofMPsegments=\count283
+\nofMParguments=\count284
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count285
+\MPscratchDim=\dimen165
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
+\everyMPtoPDFconversion=\toks25
+)
+("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf
+-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+) (full.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
 
 ("C:\Users\pc\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
@@ -554,62 +554,105 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [1
 
+
 {C:/Users/pc/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+{\cyrillictext \CYRG \cyrl \cyra \cyrv \cyra } 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--45
+Underfull \hbox (badness 10000) in paragraph at lines 47--50
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 54--55
+[2
+
+] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[3] [4] [5] [6] [7] [8] [9] [10] (full.aux) ) 
+[4] [5] [6] [7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 370--373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--387
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 402--409
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 465--467
+
+ []
+
+[14] [15]
+<pictures/clever.png, id=72, 622.82687pt x 209.28188pt>
+File: pictures/clever.png Graphic file (type png)
+<use pictures/clever.png>
+Package pdftex.def Info: pictures/clever.png  used on input line 514.
+(pdftex.def)             Requested size: 529.40533pt x 177.89041pt.
+
+Overfull \hbox (43.92134pt too wide) in paragraph at lines 514--515
+[][] 
+ []
+
+[16 <./pictures/clever.png>] (full.aux) ) 
 Here is how much of TeX's memory you used:
- 4924 strings out of 481556
- 67860 string characters out of 2915273
- 322873 words of memory out of 3000000
- 20089 multiletter control sequences out of 15000+200000
- 547590 words of font info for 61 fonts, out of 3000000 for 9000
+ 4965 strings out of 481556
+ 68349 string characters out of 2915273
+ 324130 words of memory out of 3000000
+ 20120 multiletter control sequences out of 15000+200000
+ 553398 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,37p,557b,317s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\pc\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\pc\AppData\Local\M
-iKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0600.pk> <C:\Users\pc\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\pc\AppDa
-ta\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\pc\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\User
-s\pc\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.pk> <C:
-\Users\pc\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1000.pk
-> <C:\Users\pc\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx14
-40.pk><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmex10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pc/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/pc/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users
-/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy5.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy7.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pc/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on full.pdf (10 pages, 248036 bytes).
+ 30i,8n,37p,557b,343s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\pc\AppData\Local\MiKTeX\2.9
+\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0800.pk> <C:\Users\pc\AppData\Local\MiKTe
+X\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0600.pk> <C:\Users\pc\AppData\Local\
+MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0700.pk> <C:\Users\pc\AppData\L
+ocal\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1200.pk> <C:\Users\pc\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati1000.pk> <C:\Users\pc
+\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1440.pk> <C:\Use
+rs\pc\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx2074.pk> <C
+:\Users\pc\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm1000.p
+k> <C:\Users\pc\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\labx1
+000.pk> <C:\Users\pc\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\
+labx2488.pk><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmex10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/pc/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/pc/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/pc/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/p
+c/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:
+/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7
+.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy5.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/pc/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/pc/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on full.pdf (16 pages, 379597 bytes).
 PDF statistics:
- 403 PDF objects out of 1000 (max. 8388607)
+ 481 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

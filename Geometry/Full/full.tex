@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[10pt]{report}
 \usepackage{blindtext}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -9,7 +9,11 @@
 \usepackage{mathtools}
 \usepackage[margin=2cm]{geometry}
 \usepackage[russian]{babel}
- 
+\usepackage{graphics}
+\graphicspath{{pictures/}}
+\DeclareGraphicsExtensions{.png, .pdf, .jpg}
+
+
 \begin{document} % начало документа
  
  \begin{spacing}{1.5}
@@ -17,6 +21,7 @@
      
     \tableofcontents
     \newpage
+\chapter{Жизнь до.}
 \section{Метрическое пространство. Метрика.}
 \underline{\textit{$\circ$ Определение:}}\\
 
@@ -282,7 +287,7 @@ $A\subseteq X$
 \item Пусть $x$ --- внутренняя точка А. Тогда она внутренняя и для $A\cup B$, значит $Int(A)\subseteq Int(A\cup B)$. Аналогично для $Int(B)$.
 \\ Тогда $Int(A)\cup Int(B)\subseteq Int(A\cup B)\cup Int(A\cup B)=Int(A\cup B)$.
  \begin{flushright}
-$QED.$
+$QED.$\footnote{Пункты 1-2,4 созданы вашим покорным слугой. Лекционным считать только пункт 3.}
 \end{flushright}
 \end{enumerate}
 \section{База топологии.}
@@ -292,19 +297,19 @@ $\Sigma\subseteq\Omega$ --- \emph{База топологии}, если люб�
 \subsection{Критерий базы топологии $\Omega$}
 Оказывается, что определение базы $\Sigma$ для топологии $\Omega$ эквивалентно совокупности следующих двух условий:
 \begin{enumerate}
-\item $\forall U\in\Omega~\forall x\in U \exists S\in \Sigma:~x\in S\subseteq U$
+\item $\forall U\in\Omega~\forall x\in U~~ \exists S\in \Sigma:~x\in S\subseteq U$
 \item $\forall S\in \Sigma:~~ S$ --- откр.
 \end{enumerate}
 \textbf{Доказательство:}\\
 $\underline{\Rightarrow}$: 
 \begin{enumerate}
-\item По условию, $\forall U\in \Omega~\exists I:~\underset{\alpha\in I}{\cup}S_{\alpha}\in \Sigma:~~U=\underset{\alpha\in I}{\cup}S_{\alpha}$
+\item По условию, $\forall U\in \Omega~\exists I:~\underset{\alpha\in I}{\lbrace S_{\alpha}\in \Sigma\rbrace}:~~U=\underset{\alpha\in I}{\cup}S_{\alpha}$
 \\ Тогда $x\in \underset{\alpha\in I}{\cup}S_{\alpha}\Longrightarrow \exists\alpha_{0}\in I:~x\in S_{\alpha_{0}}$, но $S_{\alpha_{0}}\subseteq\underset{\alpha\in I}{\cup}S_{\alpha}=U$. $S = S_{\alpha_{0}}$ - подходит.
 \item очевидно из определения.
 \end{enumerate}
 $\underline{\Leftarrow}$: \begin{enumerate}
-\item[]По усновию, $\forall x\in U \exists S_{x}\in\Sigma:~~x\in S_{x}\subseteq U$
-\\Но тогда $U\subseteq\underset{\alpha\in I}{\cup}S_{\alpha}\subseteq U~~\Longleftrightarrow~\underset{\alpha\in I}{\cup}S_{\alpha}=U$.
+\item[]По условию, $\forall x\in U ~~\exists S_{x}\in\Sigma:~~x\in S_{x}\subseteq U$
+\\Но тогда $U\subseteq\underset{\alpha\in U}{\cup}S_{\alpha}\subseteq U~~\Longleftrightarrow~\underset{\alpha\in U}{\cup}S_{\alpha}=U$.
 \end{enumerate}
  \underline{\emph{$\bullet$ Упражнение: }} Докажите, что шары - база метрической топологии.
 \subsection{Критерий базы некоторой топологии}
@@ -340,11 +345,187 @@ $QED.$
 \end{flushright}
 \end{enumerate}
 \end{enumerate}
+\subsubsection{Пример}
+$X, Y$ -- топологические пространства
+\\ $$\lbrace U\times V |~~ U \text{-- откр. в X}~,~ V \text{-- откр. в Y}\rbrace \text{ --- База топологии.}$$
+\\Доказывается непосредственно.
+\section{Индуцированная топология}
+\underline{\textit{$\circ$ Определение:}}\\
+$X \text{ -- т.п.};~~A\subseteq X$
+\\$\Omega_{A}:=\lbrace U\cap A |~~U\in \Omega\rbrace$ --- \underline{\textit{индуцированная топология на $A$.}}
+Само построение понадобится нам чуть позже, а сейчас ограничимся лишь тем, что докажем, что это действительно топология.\\
+\textbf{Доказательство:}
+\begin{enumerate}
+\item $\varnothing = \varnothing\cap A;~~A=X\cap A$
+\item $(U\cap A)\cap(V\cap A)=(U\cap V)\cap A$
+\item $\underset{\alpha}{\cap}(U_{\alpha}\cap A)=(\underset{\alpha}{\cap}U_{\alpha})\cap A$
+
+\end{enumerate}
+ Пока на этом всё. Читателю в упражнение остаётся проверить, что же происходит с метрикой под действием индуцирования.
+\section{Непрерывные отображения}
+\subsection{Непрерывность в точке}
+\textbf{Определения.}
+\begin{enumerate}
+
+\item Следующие определения эквивалентны, в чём читатель легко может убедиться сам. Итак,\\
+$X, Y\text{---м.п.} $\\
+$f: X\longrightarrow Y\text{---\underline{\textit{непрерывно в точке а}}}$, если:\\
+\begin{enumerate}
+\item $\forall\varepsilon>0~~\exists \delta>0:~\forall x~~d_{X}(x, a)<\delta\Rightarrow d_{Y}(f(x), f(a))<\varepsilon.$
+\item $\forall\varepsilon>0~~\exists \delta>0:~\forall x~~x\in B(a, \delta)\Rightarrow f(x)\in B(f(a), \varepsilon).$
+\item $\forall\varepsilon>0~~\exists \delta>0:~f(B(a, \delta))\subset B(f(a), \varepsilon).$
+\end{enumerate}
+\item Естественноо продолжить предыдущее определение на произвольную топологию. Итак,\\
+$X, Y\text{---т.п.} $\\
+$f: X\longrightarrow Y\text{---\underline{\textit{непрерывно в точке а}}}$, если:\\
+$\forall U_{f(a)}~~\exists V_{a}: f(V_{a})\subset U_{f(a)}.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~(*)$
+\end{enumerate}
+Это кажется нам очевидным, но давайте все же формально докажем:\\
+\textbf{Теорема.}\\
+Для метрических пространств $(*)$ дает то же самое.\\
+\textbf{Доказательство.}\\
+\begin{enumerate}
+\item \fbox{$\Rightarrow$}:\\
+Доказываем: $f\text{---непрерывно в метрическом смысле}\Longrightarrow f\text{---непрерывно в топологическом смысле.}$\\
+ Рассмотрим $U_{f(a)}\in \Omega_{Y}~~ \Rightarrow~~ \exists \varepsilon>0:~B_{f(a)}(\varepsilon)\subset U_{f(a)}$\\
+ Тогда $\exists\delta~~:~f(B(a, \delta))\subset B_{f(a)}(\varepsilon)\subset U_{f(a)}.$\\
+ $V_{a}:=B(a, \delta).$
+\item \fbox{$\Leftarrow$}:\\
+$B(f(a), \varepsilon)\in \Omega_{Y}~~\Longrightarrow~~\exists V_{a}\in\Omega_{X}: f(V_{a})\subset B(f(a), \varepsilon)$\\
+$V_{a}\in \Omega_{X}\Longrightarrow~~\exists\delta:~B_{a}(\delta)\subset V_{a}.$\\
+$f(B_{a}(\delta))\subset f(V_{a})\subset B(f(a), \varepsilon).$
+ \begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\subsection{Непрерывность отображения}
+Аналогии с матанализом возникают у вас не случайно, так что, думаю, вы знаете, что будет дальше. Итак,
+\textbf{Определение.}
+$X, Y\text{топологические пространства.}$\\
+$f:~X\rightarrow Y\text{---\textit{\underline{непрерывно}}, если:}$\\
+$\forall U\in\Omega_{Y}:~~ f^{-1}(U)\in \Omega_{X}.$\\
+И тут читатель скажет: Георгий, ты што дурак? непрерывность ета другое!\\
+Не волнуйся, дорогой читатель. Следующая теорема тебя успокоит.\\
+\subsubsection{Эквивалентность определений}
+\textbf{Теорема.}\\
+$f\text{---непрерывно}~~\Longleftrightarrow~~(\forall x\in X f\text{--непрерывно в }x).$\\
+\textbf{Доказательство.}
+\begin{enumerate}
+\item[\underline{$\Rightarrow$}]:\\
+Рассмотрим $U_{f(a)}.~~V_{a}:=f^{-1}(U_{f(a)})\text{--открыт как прообраз открытого}.~a\in V_{a}\text{ т.к. }f(a)\in U_{f(a)}, f(V_{a})\subset U_{f(a)} \text{ по построению.}$
+\item[\underline{$\Leftarrow$}]:\\
+$U\in\Omega_{Y}.$\\
+$f(x)\in U~~\Longrightarrow~~\exists V_{x}: f(V_{x})\subset U~~\Longleftrightarrow~~V_{x}\subset f^{-1}(U).$\\
+$f^{-1}(U)=\underset{x\in f^{-1}(U)}{\cup}V_{x}\text{---откр. как объединение открытых.}$
+\begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+
+\subsubsection{Свойства}
+\begin{enumerate}
+\item $g:X\rightarrow Y;~~~~f:Y\rightarrow Z,~~f,g\text{---непрерывны.}$\\
+Тогда отображение $f\circ g:X\rightarrow Z$ тоже непрерывно. \\
+Доказательство тривиально: $(f\circ g)^{-1}(U)=g^{-1}(f^{-1}(U))\text{-- открыто по условию.}$
+\item $A\subset X.~~in_{A}:\underset{a\longrightarrow a}{A\hookrightarrow X}\text{---непрерывно.}$\\
+\textbf{Доказательство.}\\
+$U\in \Omega_{X}\Longrightarrow in^{-1}(U)=U\cap A\text{--открыто по определению индуцированной топологии.}$
+\item[2.1] Следствие:
+\\$A\subset X;~~~f:X\rightarrow Y\text{--непр. Тогда }f\vert_{A}:\underset{a\longrightarrow f(a)}{A\rightarrow Y}\text{--непрерывно.}$\\
+Доказательство: $f\vert_{A}=f\circ in_{A}$ -- непрерывно как композиция непрерывных.
+\item $f:X\rightarrow Y\text{--непр. } \Longleftrightarrow~~f\vert^{f(X)}:\underset{x\longrightarrow f(x)}{X\rightarrow f(X)}\textit{ -- \underline{ограничение} -- непрерывно.}$\\
+Доказательство остается читателю в качестве упражнения.
+\item $pr_{X}:\underset{(x, y)\longrightarrow x}{X\times Y\rightarrow X};~~~pr_{Y}:\underset{(x, y)\longrightarrow y}{X\times Y\rightarrow Y}$ --- непрерывны.\\
+Докажем играючи: $pr^{-1}_{X}(U)=U\times Y\in \Sigma_{X\times Y}. $(Мы обсуждали этот пример когда речь шла о критериях базы.)
+\end{enumerate}
+\subsubsection{Сопутствующие теоремы}
+\begin{enumerate}
+\item[\textbf{Теорема.}] $(f: X\rightarrow Y$ --- непр.$)$  $~~\Longleftrightarrow~~(\forall F\in\mathcal{F}_{Y}:~f^{-1}(F)\in\mathcal{F}_{X}).$\\
+\textbf{Доказательство.}
+\begin{enumerate}
+\item[\underline{$\Rightarrow$}]:\\ 
+$f^{-1}(F)=f^{-1}(Y\backslash U)=\lbrace x\vert f(x)\in Y\backslash U\rbrace=\lbrace x\vert f(x)\notin U\rbrace =X\backslash\lbrace x\vert f(x)\in U\rbrace=X\backslash f^{-1}(U)$ -- замкнуто.
+\item[\underline{$\Leftarrow$}]:\\
+Рассуждение аналогично, поэтому мы позволим себе опустить несколько переходов, оставив их осмысление на совесть читателя.\\
+$f^{-1}(U)= f^{-1}(Y\backslash F)=X\backslash f^{-1}(F).$ 
+\end{enumerate}
+\begin{flushright}
+$QED.$
+\end{flushright}
+\item[\textbf{Теорема.}] $f:X\rightarrow Y;~~~~~U_{\alpha}\in\Omega_{X};~~~~~f\vert_{U_{\alpha}}\text{ --- непр};~~~~\underset{\alpha}{\cup}U_{\alpha}=X.$\\
+Тогда $f$ непрерывно.\\
+\textbf{Доказательство.}
+Рассмотрим произвольное $V\in \Omega_{Y}.$\\
+$(f\vert U_{\alpha})^{-1}(V)=\lbrace x\in U_{\alpha}| f(x)\in V\rbrace = \lbrace x\in U_{\alpha}\vert x\in f^{-1}(V)\rbrace = U_{\alpha}\cap f^{-1}(V).$\\
+$f^{-1}(V)=X\cap f^{-1}(V) = (\underset{\alpha}{\cup}U_{\alpha})\cap f^{-1}(V) = \cup(U_{\alpha}\cap f^{-1}(V)) = \underset{\alpha}{\cup}((f\vert U_{\alpha})^{-1}(V))\in\Omega_{X}.$
+(Заметим, что поскольку $U_{\alpha}$ открыт, $W\cap U_{\alpha}$ тоже открыт для любого $W\in \Omega_{X}$, а значит, если $(f\vert U_{\alpha})^{-1}(V)$ открыто в $U_{\alpha}$, то оно открыто и в $X$. В следующей теореме соображение будет таким же.)
+\begin{flushright}
+$QED.$
+\end{flushright}
+\item[\textbf{Теорема.}] $f:~X\rightarrow Y;~~~~~F_{1..n}\in \mathcal{F};~~~~~f\vert_{F_{i}}\text{ --- непр.};~~~~\underset{1\leq i\leq n}{\cup} F_{i}=X.$\\
+Тогда $f$ --- непрерывно.\\
+
+\textbf{Доказательство.}\\
+Рассмотрим произвольное $G\in\mathcal{F}_{Y}.$\\
+$(f\vert F_{i})^{-1}(G)~=~...~=~F_{i}\cap f^{-1}(G).$\\
+$f^{-1}(G)~=~X\cap f^{-1}(G)~=~(\underset{1\leq i\leq n}{\cup} F_{i})\cap f^{-1}(G) = \underset{i}{\cup}(F_{i}\cap f^{-1}(G)) = \underset{i}{\cup}((f\vert F_{i})^{-1}(G))\in\mathcal{F}_{X}. $
+\begin{flushright}
+$QED.$
+\end{flushright}
+
+\end{enumerate}
+\subsection{Фактор-пространство.}
+\begin{enumerate}
+\item[\textbf{Определение}].\\
+$X$ --- топологическое пространство;    $\sim$ --- отношение эквивалентности на $X$; $[x] = \lbrace y\vert y\sim x\rbrace.$\\
+Тогда $pr:\underset{x\longrightarrow [x]}{X\rightarrow X/\sim}$. $X/\sim$ --- \underline{\textit{Фактор-пространство.}}
+$\Omega_{X/\sim}:=\lbrace A\subset X/\sim\vert pr^{-1}(A)\in\Omega_{X}\rbrace.$
+\item[\textbf{Утверждение}].\\
+$\Omega_{X/\sim}$ --- топология.\\
+\textbf{Доказательство.}
+\begin{enumerate}
+\item[1] $pr^{-1}(\varnothing) = \varnothing;~~~pr^{-1}(X/\sim)=X.$
+\item[2] $U, V\in\Omega_{X}~\Longleftrightarrow~pr^{-1}(U), pr^{-1}(V)\in \Omega_{X/\sim}.$\\
+$pr^{-1}(U)\cap pr^{-1}(V) = pr^{-1}(U\cap V)\in \Omega_{X/\sim}$.
+\item[3] $\underset{\alpha}{\cup}(pr^{-1}(U_{\alpha}))=pr^{-1}(\underset{\alpha}{\cup}U_{\alpha})\in \Omega_{X/\sim}$.
+\end{enumerate}
+\item[\textbf{Теорема.}] $f:X\Rightarrow Y$ --- непр.;$~~~\sim$ -- отн. экв.;$~~~(x_{1}\sim x_{2} ~\Leftrightarrow~f(x_{1})==f(x_{2}))$\\
+$\overline{f}:\underset{[x]\longrightarrow f(x)}{X/\sim\rightarrow Y}$ --- $~\underline{\textit{Фактор-отображение}}~ \overset{!}{\text{---}}~$ непрерывно.\\
+\textbf{Доказательство.}\\
+Рассмотрим произвольное $U\in\Omega_{Y}.$\\
+По определению, $(\overline{f})^{-1}(U)\in\Omega_{X/\sim}~\Longleftrightarrow~pr^{-1}((\overline{f})^{-1}(U))\in\Omega_{X}.$\\
+Но $pr^{-1}((\overline{f})^{-1}(U))~=~\lbrace x\vert \overline{f}([x])\in U\rbrace~=~\lbrace x\vert f(x)\in U\rbrace~=~f^{-1}(U)~\in\Omega_{X}$ --- по условию.
+\end{enumerate}
+\begin{flushright}
+$QED.$
+\end{flushright}
+\subsection{Гомеоморфизм}
+\begin{enumerate}
+\item[\textbf{Определение.}]
+$f:X\rightarrow Y$ ---\underline{\textit{гомеоморфизм}} $\overset{def}{\Longleftrightarrow}$ $f$ -- биекция, непрерывно И $f^{-1}$ непрерывно.\\
+Читатель может подумать, что последнее условие излишне. Классическим опровержением такого мнения служит биекция полуинтервала в окружность.
+\item[\textbf{Определение.}] $X, Y$ ---\underline{\textit{гомеоморфны}} $\overset{def}{\Longleftrightarrow}$ между ними существует гомеоморфизм.\\
+Несколько примеров гомеоморфных пространств приведены на картинке.
+\end{enumerate}
 
 
 
 
+\includegraphics[scale=0.85]{clever}
 
+\section{Аксиомы отделимости.}
+Сразу оговоримся, что здесь аксиомы - не то, что требуется от любой топологии. В нашем случае, аксиомы - то, что мы можем потребовать, если сильно нужно.
+\begin{enumerate}
+\item[\textbf{Определения.}]
+\begin{enumerate}
+\item[\underline{$T_{0}$}]: Пусть даны любые две несовпадающие точки $x, y \in X$, тогда по крайней мере у одной из них есть окрестность, которая не содержит другую.
+\item[\underline{$T_{1}$}]: Для любых двух несовпадающих точек $x, y \in X$, найдется окрестность $y$, не содержащая $x$.
+\item[\underline{$T_{2}$}]: \underline{\emph{хаусдорфовость}} ---  Любые две различные точки $x, y \in X$ обладают окрестностями $U_{x},~U_{y},$ которые не пересекаются.
+\item[\underline{$T_{3}$}]: \underline{\textit{регулярность}} --- $\forall x\in X,~~\forall F\in\mathcal{F}~~\exists~U_{x}, U_{F}:~~U_{x}\cap U_{F} = \varnothing.$
+\item[\underline{$T_{4}$}]: $\forall F_{1}\cap F_{2}=\varnothing~~\exists~U_{F_{1}}, U_{F_{2}}:~~U_{F_{1}}\cap U_{F_{2}} = \varnothing.$\\
+Иногда для $T_{3}, T_{4}$ также требуют выполнение $T_{1}$. Мы этого делать не будем.
+\end{enumerate}
+\end{enumerate}
 
 
 

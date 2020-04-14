@@ -1,20 +1,32 @@
 \babel@toc {russian}{}
-\contentsline {section}{\numberline {1}Метрическое пространство. Метрика.}{2}%
-\contentsline {subsection}{\numberline {1.1}Примеры метрик.}{2}%
-\contentsline {section}{\numberline {2}Открытые множества. Топологические пространства.}{3}%
-\contentsline {subsection}{\numberline {2.1}Открытые множества. Свойства.}{3}%
-\contentsline {subsubsection}{\numberline {2.1.1}Теорема об открытости шара.}{3}%
-\contentsline {subsubsection}{\numberline {2.1.2}Теорема о свойствах $\Omega $}{3}%
-\contentsline {subsection}{\numberline {2.2}Топологическое пространство. Топология.}{4}%
-\contentsline {subsubsection}{\numberline {2.2.1}Примеры топологических пространств.}{4}%
-\contentsline {subsection}{\numberline {2.3}Окрестности. Теорема о дополнении подмножества.}{4}%
-\contentsline {subsubsection}{\numberline {2.3.1}Теорема о дополнении подмножества}{4}%
-\contentsline {section}{\numberline {3}Замкнутые множества.}{5}%
-\contentsline {subsection}{\numberline {3.1}Теорема о множестве замкнутых множеств}{5}%
-\contentsline {subsection}{\numberline {3.2}Теорема о соответствующей топологии}{5}%
-\contentsline {section}{\numberline {4}Внутренность, замыкание и граница.}{7}%
-\contentsline {subsection}{\numberline {4.1}Существование внутренности и замыкания}{7}%
-\contentsline {subsection}{\numberline {4.2}Свойства замыкания, внутренности и границы.}{8}%
-\contentsline {section}{\numberline {5}База топологии.}{9}%
-\contentsline {subsection}{\numberline {5.1}Критерий базы топологии $\Omega $}{9}%
-\contentsline {subsection}{\numberline {5.2}Критерий базы некоторой топологии}{10}%
+\contentsline {chapter}{\numberline {1}Жизнь до.}{2}%
+\contentsline {section}{\numberline {1.1}Метрическое пространство. Метрика.}{2}%
+\contentsline {subsection}{\numberline {1.1.1}Примеры метрик.}{2}%
+\contentsline {section}{\numberline {1.2}Открытые множества. Топологические пространства.}{4}%
+\contentsline {subsection}{\numberline {1.2.1}Открытые множества. Свойства.}{4}%
+\contentsline {subsubsection}{Теорема об открытости шара.}{4}%
+\contentsline {subsubsection}{Теорема о свойствах $\Omega $}{4}%
+\contentsline {subsection}{\numberline {1.2.2}Топологическое пространство. Топология.}{5}%
+\contentsline {subsubsection}{Примеры топологических пространств.}{5}%
+\contentsline {subsection}{\numberline {1.2.3}Окрестности. Теорема о дополнении подмножества.}{5}%
+\contentsline {subsubsection}{Теорема о дополнении подмножества}{5}%
+\contentsline {section}{\numberline {1.3}Замкнутые множества.}{6}%
+\contentsline {subsection}{\numberline {1.3.1}Теорема о множестве замкнутых множеств}{6}%
+\contentsline {subsection}{\numberline {1.3.2}Теорема о соответствующей топологии}{6}%
+\contentsline {section}{\numberline {1.4}Внутренность, замыкание и граница.}{8}%
+\contentsline {subsection}{\numberline {1.4.1}Существование внутренности и замыкания}{8}%
+\contentsline {subsection}{\numberline {1.4.2}Свойства замыкания, внутренности и границы.}{9}%
+\contentsline {section}{\numberline {1.5}База топологии.}{10}%
+\contentsline {subsection}{\numberline {1.5.1}Критерий базы топологии $\Omega $}{10}%
+\contentsline {subsection}{\numberline {1.5.2}Критерий базы некоторой топологии}{11}%
+\contentsline {subsubsection}{Пример}{11}%
+\contentsline {section}{\numberline {1.6}Индуцированная топология}{12}%
+\contentsline {section}{\numberline {1.7}Непрерывные отображения}{12}%
+\contentsline {subsection}{\numberline {1.7.1}Непрерывность в точке}{12}%
+\contentsline {subsection}{\numberline {1.7.2}Непрерывность отображения}{13}%
+\contentsline {subsubsection}{Эквивалентность определений}{13}%
+\contentsline {subsubsection}{Свойства}{14}%
+\contentsline {subsubsection}{Сопутствующие теоремы}{14}%
+\contentsline {subsection}{\numberline {1.7.3}Фактор-пространство.}{15}%
+\contentsline {subsection}{\numberline {1.7.4}Гомеоморфизм}{15}%
+\contentsline {section}{\numberline {1.8}Аксиомы отделимости.}{16}%
