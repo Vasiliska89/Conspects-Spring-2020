@@ -3,6 +3,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amssymb}
+\usepackage{amsfonts}
 \usepackage{setspace}
 \usepackage{amsmath}
 \usepackage{indentfirst}
@@ -523,9 +524,119 @@ $f:X\rightarrow Y$ ---\underline{\textit{гомеоморфизм}} $\overset{de
 \item[\underline{$T_{2}$}]: \underline{\emph{хаусдорфовость}} ---  Любые две различные точки $x, y \in X$ обладают окрестностями $U_{x},~U_{y},$ которые не пересекаются.
 \item[\underline{$T_{3}$}]: \underline{\textit{регулярность}} --- $\forall x\in X,~~\forall F\in\mathcal{F}~~\exists~U_{x}, U_{F}:~~U_{x}\cap U_{F} = \varnothing.$
 \item[\underline{$T_{4}$}]: $\forall F_{1}\cap F_{2}=\varnothing~~\exists~U_{F_{1}}, U_{F_{2}}:~~U_{F_{1}}\cap U_{F_{2}} = \varnothing.$\\
-Иногда для $T_{3}, T_{4}$ также требуют выполнение $T_{1}$. Мы этого делать не будем.
+Иногда для $T_{3}, T_{4}$ также требуют выполнение $T_{1}$. Мы этого делать не будем, но в таких случаях говорят: \\
+$T_{1}+T_{3}$ --\emph{регулярные}, $T_{1}+T_{4}$ --\emph{нормальные}.
 \end{enumerate}
 \end{enumerate}
+Докажем несколько теорем:
+\subsection{Замкнутость точек в пространствах с первой аксиомой отделимости}
+
+\begin{enumerate}
+\item[\textbf{\underline{Теорема:}}]  $X$ удовл. $T_{1}~~\Leftrightarrow \forall x\in X:~~\lbrace x\rbrace \in \mathcal{F}.$
+\item[\textbf{\underline{Док-во:}}]
+\begin{enumerate}
+\item[\underline{$\Leftarrow$}]:\\
+$\forall x, y: U_{x}:=X\backslash\lbrace y\rbrace .$
+\item[\underline{$\Rightarrow$}]:\\
+Для каждой точки $y\neq x$ есть окрестность $U_{y}$, не пересекающаяся с $x$. Тогда объединение всех этих окрестностей - и есть дополнение к $\lbrace x\rbrace$. Объединение открытых открыто.
+\begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\end{enumerate}
+\subsection{Метрические пространства нормальные.}
+Название теоремы отражает её суть. Сразу заметим, что хаусдорфовость очевидна: для любых $x\neq y$ достаточно рассмотреть шары радиуса $d(x, y)/2$. Их пересечение очевидно пусто(скажем, по неравенству треугольника.). Также сразу отметим, что в силу предыдущей теоремы из нормальности последует регулярность.
+Итак,:
+\begin{enumerate}
+\item[\textbf{\underline{Теорема:}}] Метрические пространства нормальные.
+\item[\textbf{\underline{Док-во:}}] Нам осталось проверить только выполнение $T_{4}$.\\
+Наши закрытые множества назовём $F$ и $G$. \\
+$\forall x\in F\Longrightarrow~~~x\notin G\Longrightarrow~~~\exists\varepsilon_{x}>0: B(x, \varepsilon_{x})\supset X\backslash G.$\\
+Аналогично для $y\in G$.\\
+Тогда объединение всех шаров $B(x, \varepsilon_{x}/2)$ по точкам из $F$ и $G$ соответственно будет содержать $F$ и $G$. Обозначим эти объединения через $U_{F}$ и $U_{G}$ соответственно.\\
+Нам осталось показать, что построенные множества не пересекаются.
+\\ В самом деле, пусть $\exists z\in U_{F}\cap U_{G}$. Тогда $\exists~ x\in F, y\in G:~~ d(x, z)<\varepsilon_{x}/2,~~ d(y, z)<\varepsilon_{y}/2$.\\
+Пусть НУО $varepsilon_{x}\leq \varepsilon_{y}$. Тогда:\\
+$d(x, y)\leq d(x, z)+d(z, y)<\varepsilon_{y}/2+\varepsilon_{y}/2=\varepsilon_{y}$, что абсурдно по построению.
+\begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\section{Аксиомы счетности. Всюду плотность. Сепарабельность.}
+Идеология понятия "аксиома" здесь ровно такая же, как в случае с аксиомами отделимости. Итак,\\
+\begin{enumerate}
+\item[\textbf{Определение.}]
+\emph{\underline{Базой в точке $x_{0}$}} называется $\Sigma_{x_{0}}\subset\Omega$, удовлетворяющая сразу следующим двум условиям:
+\begin{enumerate}
+\item $\forall S\in \Sigma_{x_{0}}:~~x_{0}\in S$;
+\item $\forall U\in \Omega:~~x_{0}\in U\Longrightarrow~~\exists S \in \Sigma_{x_{0}}:~~S\subset U.$
+\end{enumerate}
+\item[\textbf{Определения.}]
+\begin{enumerate}
+\item[\underline{$A_{1}$:}] $\forall x_{0}\in X~~\exists $ НБЧС $\Sigma_{x_{0}}.$
+\item[\underline{$A_{2}$:}] В $X$ существует НБЧС база.
+\\Очевидно, $A_{2}\Rightarrow~A_{1}.$
+\end{enumerate}
+\item[\textbf{Определение.}] $A\subset X.$
+\begin{enumerate}
+\item $A$ - \emph{\underline{всюду плотно}}, если $Cl(A)=X.$
+\item $A$ - \emph{\underline{всюду плотно}}, если $\forall\varnothing\neq U\in\Omega:~~U\cap A\neq \varnothing.$
+\end{enumerate}
+\item[\textbf{Теорема.}] Определения всюду плотности равносильны.
+\item[\textbf{Док-во.}]
+\begin{enumerate}
+\item[\underline{$\Rightarrow$}]: От противного.\\
+Пусть $\exists~ U\neq\varnothing:~ U\cap A=\varnothing.$ Тогда $X\backslash U\in \mathcal{F},~X\backslash  U\supseteq A\Longrightarrow~X\neq X\backslash U\supset Cl(A)\Longrightarrow Cl(A)\neq X.$
+\item[\underline{$\Leftarrow$}]: Рассмотрим $U:=X\backslash Cl(A).$\\
+$U$ - открыто. Предположим, что оно не пусто. Тогда $\varnothing=U\cap Cl(A)\supseteq U\cap A\neq\varnothing$, что абсурдно. Откуда и следует, что $C(A)=X.$
+\end{enumerate}
+\item[\textbf{Определение.}] $X$ - \emph{\underline{сепарабельно}}, если в $X$ существует НБЧС всюду плотное множество.
+\item[\textbf{Теорема.}] Если $X$ удовлетворяет $A_{2}$, то $X$ сепарабельно.
+\item[\textbf{Док-во.}] Пусть $\Sigma=\lbrace S_{1}, S_{2},....\rbrace $ --- НБЧС база. НУО $S_{i}\neq \varnothing$, зафиксируем $a_{i}\in S_{i}~~\forall i>0$\\
+Теперь построим наше всюду плотное множество: $A:=\lbrace a_{i}|i>0\rbrace$. Пока очевидно, что $A$ НБЧС (элементы могут совпадать, но мощность от этого не возрастает, а значит всё хорошо).\\
+Наконец, покажем, что $A$ всюду плотно:\\
+$\forall U\neq\varnothing\Longrightarrow U=\underset{i\in I}{\cup}(S_{i})\Longrightarrow S_{i_{0}}\subset U\Rightarrow a_{i_{0}}\in A\cap U.$
+\begin{flushright}
+$QED.$
+\end{flushright}
+\item[\textbf{Теорема.}] Если $X$ -- метрическое и сепарабельное, то оно удовлетворяет аксиоме $A_{2}.$
+\item[\textbf{Док-во.}] Всё, что нам нужно - предъявить НБЧС базу. Пусть $A=\lbrace a_{1}, a_{2},...\rbrace$ - НБЧС всюду плотное множество. \\
+$\Sigma:=\lbrace B(a_{n}, k^{-1})|~ a_{n}\in A, k\in\mathbb{N}\rbrace\cong \mathbb{N\times N}$ -- НБЧС.\\
+Проверим, что $\Sigma$ является базой, что эквивалентно $\forall U\in\Omega\forall x\in U~\exists B(a_{n}, k^{-1})\subset U. $\\
+Действительно, $U$ - открыто, а значит, $\exists B(x, \varepsilon)\subset U.$ Тогда в качестве эпсилон можно взять $k^{-1}$ для некоторого $k$. Теперь посмотрим на шар того же центра вдвое меньшего радиуса. По построению, в нем лежит некоторый элемент $a_{n}\in A$. Тогда $x\in B(a_{n}, (2k)^{-1})\subset U.$
+\begin{flushright}
+$QED.$
+\end{flushright}
+
+
+\end{enumerate}
+
+\subsection{Покрытие. Теорема Линделёфа}
+\begin{enumerate}
+\item[\textbf{Определение.}] $\lbrace A_{\alpha}\rbrace\subset 2^{X}$ - \emph{\underline{покрытие}}, если $\cup A_{\alpha}=X$. Если каждое из $A_{\alpha}$ открыто, покрытие называется \emph{\underline{открытым покрытием}}. Интуитивно вводится понятие \emph{\underline{подпокрытие}}.
+\item[\textbf{Теорема.}](Линделёф) Если в $X$ выполняется $A_{2}$, то у любого покрытия существует НБЧС подпокрытие.
+\item[\textbf{Д-во.}] Пусть $\Sigma=\lbrace S_{1}, S_{2},...\rbrace$ - НБЧС база, $\lbrace U_{\alpha}\rbrace_{\alpha\in I}$ - покрытие.\\
+$\forall \alpha \exists I_{\alpha}:~~U_{\alpha} = \underset{i\in I_{\alpha}}{\cup}S_{i}$ просто по определению базы. Но тогда\\
+$X = \underset{\alpha\in I}{\cup}U_{\alpha} = \underset{\alpha\in I}{\cup}(\underset{i\in I_{\alpha}}{\cup}(S_{i}))$
+Обозначим $A:=\underset{\alpha\in I}{\cup}I_{\alpha}\subseteq \mathbb{N}.$ Тогда для каждого $i$ есть $\alpha_{i}$ такое, что $(i\in I_{\alpha_{i}}\Longrightarrow~S_{i}\subset U_{\alpha_{i}})$ Выберем по одному такому $U_{\alpha_{i}}$, оно и будет нашим НБЧС подпокрытием.
+\begin{flushright}
+$QED.$
+\end{flushright}
+\end{enumerate}
+\section{Связность}
+\begin{enumerate}
+\item[\textbf{Определение.}] $X$ - \emph{\underline{не связно}}, если $\exists U, V\in\Omega_{X}:~~U\cap V=\varnothing, U, V\neq \varnothing, U\cup V=X$. Отрицание этого условия является определением \emph{\underline{связного}} пространства.
+\item[\textbf{Теорема.}] Отрезок $[0, 1]$ в $\mathbb{R}$ связен.
+\item[\textbf{Д-во.}] Представим отрезок в виде дизъюнктного объединения открытых множеств $U$ и $V$. НУО будем считать, что $0\in U$.\\
+Обозначим $t_{0}:=sup(t|[0, t]\in U)$ - он существует, т.к. мнужество не пусто и ограничено.\\
+Тогда $[0, t_{0}]\subset U$. Действительно, пусть $0\leq t^{*}\lneq t_{0}$. Тогда $\exists t>t^{*}:~~ [0, t]\in U.$ Но тогда $t^{*}\in U.$
+Покажем, что $t_{0}=1:$ Пусть это не так, то есть $t_{0}\lneq 1:$  Любая точка лежит в открытом множестве с некоторой окрестностью. Предположим, что $t_{0}\in U$. Обозначим за $\varepsilon$ соответствующую окрестность. тогда $[0, t_{0}+\varepsilon/2]\subset U$, что противоречит построению. Если же $t_{0}\in V$, мы аналогично приходим к тому, что $t_{0}-\varepsilon$ - верхняя грань построенного множества. 
+\\ Таким образом, $t_{0}=1, U=[0, 1], V=\varnothing.$ Значит множество связно.
+\end{enumerate}
+
+
+
+
 
 
 

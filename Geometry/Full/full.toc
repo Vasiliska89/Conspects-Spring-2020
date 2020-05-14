@@ -30,3 +30,8 @@
 \contentsline {subsection}{\numberline {1.7.3}Фактор-пространство.}{15}%
 \contentsline {subsection}{\numberline {1.7.4}Гомеоморфизм}{15}%
 \contentsline {section}{\numberline {1.8}Аксиомы отделимости.}{16}%
+\contentsline {subsection}{\numberline {1.8.1}Замкнутость точек в пространствах с первой аксиомой отделимости}{16}%
+\contentsline {subsection}{\numberline {1.8.2}Метрические пространства нормальные.}{17}%
+\contentsline {section}{\numberline {1.9}Аксиомы счетности. Всюду плотность. Сепарабельность.}{17}%
+\contentsline {subsection}{\numberline {1.9.1}Покрытие. Теорема Линделёфа}{18}%
+\contentsline {section}{\numberline {1.10}Связность}{19}%
